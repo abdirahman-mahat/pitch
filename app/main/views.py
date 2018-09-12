@@ -1,8 +1,8 @@
 from flask import Flask
 from . import main
-from flask import render_template,redirect,url_for,abort
+from flask import render_template,request,redirect,url_for,abort
 from flask_login import login_required
-from ..models import User, Pitch, Category
+from ..models import User, Pitch, Comment
 
 
 app = Flask(__name__)
@@ -27,3 +27,4 @@ def profile(uname):
        abort(404)
 
        return render_template("profile/profile.html", user = user)
+
