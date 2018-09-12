@@ -43,8 +43,9 @@ class Pitch(db.Model):
     title = db.Column(db.String(255))
     content = db.Column(db.String())
     category = db.Column(db.String(255))
-
+    
     user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
+    comment = db.relationship('Comment', backref = 'pitch', lazy= "dynamic")
 
     def __repr__(self):
         return f'{self.title}'
@@ -54,7 +55,7 @@ class Comment(db.Model):
 
     id = db.Column(db.Integer,primary_key=True)
     comment_content = db.Column(db.String())
-    pitch_id = db.Column(db.Integer)
+    pitchid = db.Column(db.Integer,db.ForeignKey('pitch.id'))
     user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
 
 
