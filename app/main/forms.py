@@ -8,3 +8,11 @@ class PitchForm(FlaskForm):
     content = TextAreaField('The pitch...')
     submit = SubmitField('Submit')
 
+
+class CommentForm(FlaskForm):
+
+    title = StringField('Comment Title')
+    comment = TextAreaField('Post Of The Comment')
+    submit = SubmitField('Submit')
+
+
