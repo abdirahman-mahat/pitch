@@ -3,6 +3,19 @@
 
 {% block content %}
 <div style="background-color:#deeef9; padding-top: 130px; padding-bottom: 400px;" class="container-fluid">
-  {{wtf.quick_form(form)}}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1">
+
+            </div>
+            <div class="col-md-10">
+                {{wtf.quick_form(form)}}
+            </div>
+            <div class="col-md-1">
+
+            </div>
+        </div>
+    
+    </div>
 </div>
 {% endblock %}
