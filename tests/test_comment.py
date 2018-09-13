@@ -3,7 +3,7 @@ from app.models import Comment
 
 class CommentTest(unittest.TestCase):
     '''
-    Test Class to test the behaviour of the Pitch class
+    Test Class to test the behaviour of the comment class
     '''
 
     def setUp(self):
@@ -14,3 +14,6 @@ class CommentTest(unittest.TestCase):
 
     def test_instance(self):
         self.assertTrue(isinstance(self.new_comment,Comment))
+
+if __name__ ==  '__main__':
+    unittest.main()

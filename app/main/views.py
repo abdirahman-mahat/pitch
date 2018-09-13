@@ -64,15 +64,12 @@ def new_pitch():
         title=form.title.data
         content=form.content.data
         category=form.category.data
-        pitch = Pitch(title=title,
-                      content=content,
-                      category=category,
-                      )
-
+        pitch = Pitch(title=title,content=content,category=category,)
+        # pitch.save_pitch(pitch)
         db.session.add(pitch)
         db.session.commit()
 
-        # pitch.save_pitch(pitch)
+        
         
         flash('Your pitch has been created!', 'success')
         return redirect(url_for('main.index',id=pitch.id))

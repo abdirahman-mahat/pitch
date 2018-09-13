@@ -10,11 +10,10 @@ class PitchTest(unittest.TestCase):
         '''
         Set up method that will run before every Test
         '''
-        self.new_pitch = Pitch(56,
-                               'My pitch',
-                               'I can pitch all day long',
-                               'But wont',
-                               15,72)
+        self.new_pitch = Pitch(56,'My pitch','I can pitch all day long','But wont',15,72)
 
     def test_instance(self):
         self.assertTrue(isinstance(self.new_pitch,Pitch))
+
+if __name__ ==  '__main__':
+    unittest.main()
