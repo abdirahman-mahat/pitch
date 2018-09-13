@@ -63,11 +63,11 @@ def new_pitch():
 
         title=form.title.data
         content=form.content.data
-        category_id=form.category_id.data
+        category=form.category.data
         pitch = Pitch(title=title,
                       content=content,
-                      category_id=category_id,
-                      user=current_user)
+                      category=category,
+                      )
 
         db.session.add(pitch)
         db.session.commit()
@@ -75,6 +75,6 @@ def new_pitch():
         # pitch.save_pitch(pitch)
         
         flash('Your pitch has been created!', 'success')
-        return redirect(url_for('main.single_pitch',id=pitch.id))
+        return redirect(url_for('main.index',id=pitch.id))
 
     return render_template('new_pitch.html', title='New Post', pitch_form=form, post ='New Post')
