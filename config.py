@@ -17,8 +17,8 @@ class TestConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://zamzam:Ilovememore100@localhost/pitchperfect_test'
 
 class DevConfig(Config):
-    DEBUG = True
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://zamzam:Ilovememore100@localhost/pitchperfect'
+    DEBUG = True
 
 config_options = {
 'development':DevConfig,
