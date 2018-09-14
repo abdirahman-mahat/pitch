@@ -22,7 +22,7 @@ Other users can give feedback to the pitch posts by commenting, liking or dislik
 
 ## Specifications
 
-Get the specs [here](https://github.com/MutumaMutuma/PitchPerfect/blob/master/specs.md)
+Get the specs [here](https://github.com/MutumaMutuma/Pitch/blob/master/specs.md)
 
 ## Set-up and Installation
 
