@@ -1,5 +1,5 @@
-| Behavior            | Input                         | Output                        | 
 
+|  Behavior            | Input                         | Output                        |
 | ------------------- | ----------------------------- | ----------------------------- |
 | Signing up | Fill your credentials in the form in the signup page | Redirects to the login page after sign up |
 | Signing in | Fill in the form in the signin page | Redirects to the home page |
