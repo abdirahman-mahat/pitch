@@ -34,19 +34,25 @@ Get the specs [here](https://github.com/MutumaMutuma/PitchPerfect/blob/master/sp
 ### Create a Virtual Environment
 
 Run the following commands in the same terminal:
-`sudo apt-get install python3.6-venv`
-`python3.6 -m venv virtual`
-`source virtual/bin/activate`
+
+```sudo apt-get install python3.6-venv```
+
+```python3.6 -m venv virtual```
+
+```source virtual/bin/activate```
 
 ### Install dependancies
 
 Install dependancies that will create an environment for the app to run
-`pip3 install -r requirements`
+
+```pip3 install -r requirements```
+
 Install [Postgres](https://www.postgresql.org/download/)
 
 ### Prepare environment variables
 
 ```export DATABASE_URL='postgresql+psycopg2://username:password@localhost/pitchperfect'```
+
 ```export SECRET_KEY='Your secret key'```
 
 ### Run Database Migrations
