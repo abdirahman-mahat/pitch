@@ -16,17 +16,18 @@
                     <article class="media content-section">
                         <div class="card-title">
                             <div class="article-metadata">
-                                    
-                      
-                                
-                                
+                              
                             </div>
                             <div class="card-body">
                             <small> {{ pitch.posted_on }}</small>
                             <h4>Category: {{ pitch.category }}</h4>
                             <small> {{ pitch.title }} </small>
+                            
                             <p> {{ pitch.content }}</p>
-                            <div id="comment" class="comment"><button class="btn btn-outline-info btn-sm">Comment</button> </div>
+                            <small><a href="#"><button class="btn btn-outline-success btn-sm"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Symbol_thumbs_up.svg/765px-Symbol_thumbs_up.svg.png" height="20px"></button></a>  <a href="#"><button class="btn btn-outline-warning btn-sm"> <img src="https://vignette.wikia.nocookie.net/candy-crush-jelly/images/2/2f/Thumbs-down-icon.png/revision/latest?cb=20151226072412" height="20px"></button></a></small>
+                            <br>
+                            <br>
+                            <div><a href="/comment/new/{{pitch.id}}"> <button class="btn btn-outline-info btn-sm">Comment</button> </a> </div>
                             
                             </div>
                             

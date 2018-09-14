@@ -10,10 +10,8 @@ class CommentTest(unittest.TestCase):
         '''
         Set up method that will run before every Test
         '''
-        self.new_comment = Comment(1234, 'I love this pitch')
+        self.new_comment = Comment(id =1, comment_content = 'I love this pitch')
 
     def test_instance(self):
         self.assertTrue(isinstance(self.new_comment,Comment))
 
-if __name__ ==  '__main__':
-    unittest.main()
