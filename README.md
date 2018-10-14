@@ -12,19 +12,13 @@ Pitch It is a web application that is meant for users to add pitches on differen
 
 The Pitch It web application is meant for users to post pitches on any of the 7 different categories. These categories are:
 
-    1. Interview Pitch
-    2. Business
-    3. Maths Pitch
-    4. Pick-up lines
-    5. Science and Tech
-
 A user can select any of the categories from the a select field given in the app
 
 Other users can give feedback to the pitch posts by commenting, liking or disliking the pitch. 
 
 ## Specifications
 
-Get the specs [here](https://github.com/MutumaMutuma/Pitch/blob/master/specs.md)
+
 
 ## Set-up and Installation
 
@@ -88,9 +82,9 @@ SQLAlchemy errors, automatic sign out has a short time span
 
 ## Support and contact details
 
-Contact me on lewismutuma1000@gmail.com for any comments, reviews or advice.
+Contact me on abdirahmanmahat3@gmail.com for any comments, reviews or advice.
 
 ### License
 
     **MIT LICENSE** 
-&copy; Copyright **Lewis Mutuma**
+&copy; Copyright **abdirahman mahat**
