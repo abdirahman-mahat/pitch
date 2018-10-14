@@ -1,5 +1,5 @@
 from datetime import datetime
-from . import db 
+from . import db
 from werkzeug.security import generate_password_hash,check_password_hash
 from flask_login import UserMixin
 from . import login_manager
@@ -36,6 +36,7 @@ class User(UserMixin, db.Model):
     def __repr__(self):
         return f'{self.username}'
 
+
 class Pitch(db.Model):
     __tablename__ = 'pitch'
 
@@ -43,7 +44,7 @@ class Pitch(db.Model):
     title = db.Column(db.String(255))
     content = db.Column(db.String())
     category = db.Column(db.String(255))
-    
+
     user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
     pitch_id = db.relationship('Comment', backref = 'comments', lazy= "dynamic")
 
@@ -60,7 +61,4 @@ class Comment(db.Model):
 
 
     def __repr__(self):
-        return f'{self.comment}'  
-
-
-
+        return f'{self.comment}'

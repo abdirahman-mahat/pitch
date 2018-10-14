@@ -1,7 +1,7 @@
 import os
 
 class Config:
-    SECRET_KEY='01570936bd6b231dd1e1037bb224cd'
+    SECRET_KEY='1234'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587
@@ -14,14 +14,14 @@ class ProdConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
 class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI = os.environ.get('HEROKU_POSTGRESQL_ONYX_URL')
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://abdirahman:1234@localhost/pitch_test'
 
 class DevConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://zamzam:Ilovememore100@localhost/pitchperfect'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://abdirahman:1234@localhost/pitch'
     DEBUG = True
 
 config_options = {
 'development':DevConfig,
 'production':ProdConfig,
 'test':TestConfig
-}    
+}
