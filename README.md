@@ -70,7 +70,7 @@ Open the browser on `http://localhost:5000/`
 
 ## Known bugs
 
-SQLAlchemy errors, automatic sign out has a short time span
+SQLAlchemy errors, automatic sign out has a short time span, deployment to heroku
 
 ## Technologies used
 
