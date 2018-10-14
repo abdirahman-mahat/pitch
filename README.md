@@ -19,6 +19,7 @@ Other users can give feedback to the pitch posts by commenting, liking or dislik
 ## Specifications
 
 
+Get the specs [here](https://github.com/abdirahman-mahat/pitch/blob/master/specs.md)
 
 ## Set-up and Installation
 
