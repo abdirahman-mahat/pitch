@@ -1,6 +1,7 @@
 {% extends 'base.html'%}
 {% import 'bootstrap/wtf.html' as wtf%}
 
+<<<<<<< HEAD
             {% block content %}
 <div class="container-fluid">
     <div  style="background-color:#deeef9; padding-top: 130px; padding-bottom: 200px;" class="row">
@@ -22,9 +23,31 @@
                 <p> Don't have an account? <a href="{{url_for('auth.register')}}">Sign up here</a></p>
                 </div>
                 <div clas="col-md-2"> </div>
+=======
+        {% block content %}
+<div class="container-fluid">
+    <div  style="background-color:#deeef9; padding-bottom: 130px; padding-top: 130px;" class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2"> 
+                    
+                    </div>
+                    <div style="color:white; background-image: url(https://static.makeuseof.com/wp-content/uploads/2012/02/Ying-and-Yang.png); background-size: cover; background-repeat: no-repeat;" class="col-md-8">
+                        <img style="text-align: center;" class="align-center img-responsive" src="https://media.giphy.com/media/107yCzSpEGea1G/giphy.gif" height="100px">
+                    {{wtf.quick_form(registration_form)}}
+
+                    </div>
+                    <div class="col-md-2">
+                    
+                    </div>
+>>>>>>> af6b453f4f3974552e1f96fecffab63a657ef23b
                 </div>
             </div>
     </div>
 </div>
+<<<<<<< HEAD
             {% endblock%}
+=======
+        {% endblock%}
+>>>>>>> af6b453f4f3974552e1f96fecffab63a657ef23b
     

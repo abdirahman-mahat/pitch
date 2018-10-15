@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'base.html'%}
 {% import 'bootstrap/wtf.html' as wtf%}
 
@@ -23,3 +24,17 @@
 </div>
         {% endblock%}
     
+=======
+{% extends 'bootstrap/base.html'%}
+{% import 'bootstrap/wtf.html' as wtf%}
+
+{% block content %}
+<div class="col-md-4"> </div>
+<div class="col-md-8">
+<!-- rendering the registration form -->
+  {{wtf.quick_form(registration_form)}}
+
+ </div>
+
+{% endblock%}
+>>>>>>> af6b453f4f3974552e1f96fecffab63a657ef23b

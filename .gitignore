@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 start.sh
+=======
+virtual/
+*.pyc
+>>>>>>> af6b453f4f3974552e1f96fecffab63a657ef23b
