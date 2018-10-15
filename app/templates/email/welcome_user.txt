@@ -1,8 +1,3 @@
 Hello {{user.username}}
-<<<<<<< HEAD
-Welcome to Pitch perfect
-We have just seen you have signed up for our application and want to welcome you to the family. Please enjoy the Pitch perfect
-=======
 Welcome to Pitch
 We have just seen you have signed up for our application and want to welcome you to the family. Please enjoy the world of wonderful pitches.
->>>>>>> af6b453f4f3974552e1f96fecffab63a657ef23b
