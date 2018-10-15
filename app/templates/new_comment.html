@@ -6,22 +6,22 @@
     <div  style="background-color:#deeef9; padding-bottom: 130px; padding-top: 130px;" class="row">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-2"> 
-                        <a href="/"><img src="https://www.logolynx.com/images/logolynx/52/52c91a3ad83f2025fae1cc9755ebc6a2.png" height="70px"> </a>
+                    <div class="col-md-2">
+                        <a href="/"></a>
                     </div>
-                    <div style="color:white; background-image: url(https://static.makeuseof.com/wp-content/uploads/2012/02/Ying-and-Yang.png);" class="col-md-8">
+                    <div style="color:black; " class="col-md-8">
 
                         {{ wtf.quick_form(comment_form) }}
 
                     </div>
                     <div class="col-md-2">
-                    
+
                     </div>
-                    
+
                 </div>
                 <br>
                 <br>
-            
+
                 <div style="width: 300px;" class="container">
                     {% for comment in comment%}
                     <div class="card">
@@ -41,7 +41,6 @@
                 </div>
             </div>
     </div>
-                    
+
 </div>
 {% endblock%}
-    

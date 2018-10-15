@@ -3,37 +3,36 @@
     {% block content %}
 <div class="container-fluid">
     <div  style="background-color:#deeef9; padding-top: 130px;" class="row">
-        
+
         <div class="col-md-2">
-        <img src= "https://lh3.googleusercontent.com/_92sA_iP2uQZftGNpfp7xJN7_Tv_G35EEdA4ZZCtjMwMTzgttc234FmTv37j8Wd3cB3dimDncpZ82nY_lIvtreE=w1024" height="150px">
         </div>
         <div class="col-md-8">
         <a href="{{ url_for('main.new_pitch') }}"><button style="color: black;" class="btn btn-outline-info btn-sm">Post a pitch</button></a>
             <br>
             <br>
-            {% for pitch in pitchs %} 
+            {% for pitch in pitchs %}
                 <div style="background-color:#b3d7ef;" class="card">
                     <article class="media content-section">
                         <div class="card-title">
                             <div class="article-metadata">
-                              
+
                             </div>
                             <div class="card-body">
                             <small> {{ pitch.posted_on }}</small>
                             <h4>Category: {{ pitch.category }}</h4>
                             <small> {{ pitch.title }} </small>
-                            
+
                             <p> {{ pitch.content }}</p>
                             <small><a href="#"><button class="btn btn-outline-success btn-sm"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Symbol_thumbs_up.svg/765px-Symbol_thumbs_up.svg.png" height="20px"></button></a>  <a href="#"><button class="btn btn-outline-warning btn-sm"> <img src="https://vignette.wikia.nocookie.net/candy-crush-jelly/images/2/2f/Thumbs-down-icon.png/revision/latest?cb=20151226072412" height="20px"></button></a></small>
                             <br>
                             <br>
                             <div><a href="/comment/new/{{pitch.id}}"> <button class="btn btn-outline-info btn-sm">Comment</button> </a> </div>
-                            
+
                             </div>
-                            
+
                         </div>
                     </article>
-                </div>   
+                </div>
             {% endfor %}
         </div>
         <div class="col-md-2">
@@ -41,7 +40,7 @@
         </div>
     </div>
 
-    
-</div>  
+
+</div>
 {% endblock  %}
     </body>
