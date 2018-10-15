@@ -13,9 +13,9 @@ app = Flask(__name__)
 @main.route("/")
 def index():
    '''
-   title = "Pitch Perfect"
+   title = "Pitch"
    '''
-   title = 'Pitch Perfect'
+   title = 'Pitch'
    pitchs = Pitch.query.all()
 
    return render_template('index.html', title= title, pitchs = pitchs)
@@ -65,8 +65,9 @@ def new_pitch():
         title=form.title.data
         content=form.content.data
         category=form.category.data
+        like
+
         pitch = Pitch(title=title, content=content,category=category)
-        # pitch.save_pitch(pitch)
         db.session.add(pitch)
         db.session.commit()
 
@@ -82,17 +83,49 @@ def new_comment(id):
     form = CommentForm()
 
     if form.validate_on_submit():
-        
+
         comment_content = form.comment.data
 
         comment = Comment(comment_content= comment_content,pitch_id=id)
 
-        # pitch.save_pitch(pitch)
         db.session.add(comment)
         db.session.commit()
-        
+
     comment = Comment.query.filter_by(pitch_id=id).all()
 
 
 
     return render_template('new_comment.html', title='New Post', comment=comment,comment_form=form, post ='New Post')
+
+@main.route('/pitch_review/<int:id>',methods=['GET','POST'])
+@login_required
+def pitch_review(id):
+    pitch=Pitch.query.get_or_404(id)
+    comment= Review.query.all()
+    form=ReviewForm()
+
+    if request.args.get("like"):
+        pitch.like = pitch.like+1
+
+        db.session.add(pitch)
+        db.session.commit()
+
+        return redirect("/pitch_review/{pitch_id}".format(pitch_id=pitch.id))
+
+    elif request.args.get("dislike"):
+        pitch.dislike=pitch.dislike+1
+
+        db.session.add(pitch)
+        db.session.commit()
+
+        return redirect("/pitch_review/{pitch_id}".format(pitch_id=pitch.id))
+
+    if form.validate_on_submit():
+        review = form.review.data
+
+        new_review = Review(id=id,review=review,user_id=current_user.id)
+
+        new_review.save_review()
+        return redirect(url_for('main.pitch_review',id=id))
+    reviews = Review.query.all()
+    return render_template('pitch_review.html',comment=comment,pitch=pitch,review_form=form,reviews=reviews)
