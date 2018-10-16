@@ -65,7 +65,7 @@ def new_pitch():
         title=form.title.data
         content=form.content.data
         category=form.category.data
-        like
+        
 
         pitch = Pitch(title=title, content=content,category=category)
         db.session.add(pitch)
